@@ -24,9 +24,9 @@ public class PaymentController {
         int result = paymentService.create(payment);
         log.info("插入结果result:" + result);
         if (result > 0) {
-            return new CommonResult(200, "插入数据库成功,serverort:"+serverPort, result);
+            return new CommonResult(200, "插入数据库成功,serverPort:"+serverPort, result);
         }
-        return new CommonResult(500, "插入数据库失败serverPort:"+serverPort);
+        return new CommonResult(500, "插入数据库失败,serverPort:"+serverPort);
     }
 
     @GetMapping("/payment/get/{id}")
